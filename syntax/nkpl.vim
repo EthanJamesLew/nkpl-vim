@@ -7,14 +7,14 @@ endif
 syn clear
 
 " Define Operators
-syn match nkplOperator "⋅\|∨\|∧\|∪\|ε\|δ\|⊤\|⊥\|=\|≠\|←\|⋆\|¬"
+syn match nkplOperator "⋅\|∨\|∧\|∪\|ε\|δ\|⊤\|⊥\|=\|≠\|≡\|≢\|←\|⋆\|¬\|∅"
 
 " Define Constructs
 syn keyword nkplConstruct any do let log rep drop skip
 syn keyword nkplCommand import check 
 
 " Define special condition constructs and meta programming
-syn match nkplCondition "@"
+syn match nkplCondition "@\|?"
 syn match nkplLambda "λ"
 
 " Define control structures
