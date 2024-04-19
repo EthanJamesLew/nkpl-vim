@@ -11,6 +11,7 @@ syn match nkplOperator "⋅\|∨\|∧\|∪\|ε\|δ\|⊤\|⊥\|=\|≠\|←\|⋆\|
 
 " Define Constructs
 syn keyword nkplConstruct any do let log rep drop skip
+syn keyword nkplCommand import check 
 
 " Define special condition constructs and meta programming
 syn match nkplCondition "@"
@@ -26,6 +27,7 @@ syn region nkplString start=+"+ skip=+\\"+ end=+"+ keepend
 " Highlighting rules
 hi def link nkplOperator Operator
 hi def link nkplConstruct Statement
+hi def link nkplCommand Statement
 hi def link nkplCondition Special 
 hi def link nkplLambda Special
 hi def link nkplControlStr Keyword
