@@ -13,8 +13,8 @@ syn match nkplOperator "⋅\|∨\|∧\|∪\|ε\|δ\|⊤\|⊥\|=\|≠\|←\|⋆\|
 syn keyword nkplConstruct any do let log rep drop skip
 
 " Define special condition constructs and meta programming
-syn match nkplCondition "@[a-zA-Z0-9_]+"
-syn match nkplLambda "λ [a-zA-Z0-9_]+"
+syn match nkplCondition "@"
+syn match nkplLambda "λ"
 
 " Define control structures
 syn keyword nkplControlStr if then else case of where
@@ -26,7 +26,7 @@ syn region nkplString start=+"+ skip=+\\"+ end=+"+ keepend
 " Highlighting rules
 hi def link nkplOperator Operator
 hi def link nkplConstruct Statement
-hi def link nkplCondition Identifier
+hi def link nkplCondition Special 
 hi def link nkplLambda Special
 hi def link nkplControlStr Keyword
 hi def link nkplComment Comment
@@ -37,4 +37,3 @@ au BufRead,BufNewFile *.nkpl set filetype=nkpl
 
 " Link to the language's main syntax
 let b:current_syntax = "nkpl"
-
