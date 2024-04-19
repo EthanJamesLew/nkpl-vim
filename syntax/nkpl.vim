@@ -1,4 +1,4 @@
-" Syntax highlighting for KAT modeling based language (.nkpl files)
+" Syntax highlighting for NKPL modeling based language (.nkpl files)
 if exists("b:current_syntax")
     finish
 endif
@@ -6,27 +6,29 @@ endif
 " Clear old syntax
 syn clear
 
-" Define special characters and operators
-syn match nkplOperator "⋅" display
-syn match nkplOperator "∪" display
-syn match nkplOperator "∧" display
-syn match nkplOperator "≠" display
-syn match nkplOperator "≡" display
-syn match nkplOperator "≢" display
-syn match nkplOperator "¬" display
+" Define Operators
+syn match nkplOperator "⋅\|∨\|∧\|∪\|ε\|δ\|⊤\|⊥\|=\|≠\|←\|⋆\|¬"
 
-" Define conditions
-syn match nkplCondition "@[a-zA-Z0-9_=<>?]+"
+" Define Constructs
+syn keyword nkplConstruct any do let log rep drop skip
 
-" Define comments
-syn match nkplComment "--.*" display
+" Define special condition constructs and meta programming
+syn match nkplCondition "@[a-zA-Z0-9_]+"
+syn match nkplLambda "λ [a-zA-Z0-9_]+"
 
-" Define strings
+" Define control structures
+syn keyword nkplControlStr if then else case of where
+
+" Comments and Strings (assuming -- for comments and " for strings)
+syn match nkplComment "--.*$"
 syn region nkplString start=+"+ skip=+\\"+ end=+"+ keepend
 
 " Highlighting rules
 hi def link nkplOperator Operator
+hi def link nkplConstruct Statement
 hi def link nkplCondition Identifier
+hi def link nkplLambda Special
+hi def link nkplControlStr Keyword
 hi def link nkplComment Comment
 hi def link nkplString String
 
