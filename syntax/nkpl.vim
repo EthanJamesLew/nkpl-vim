@@ -6,7 +6,6 @@ endif
 " Clear old syntax
 syn clear
 
-" Define NetKAT Syntax 
 syn match nkplBAExp "∨\|∧\|⊤\|⊥"
 syn match nkplNetKAT "∅\|ε\|δ\|=\|≠\|←\|∪\|⋅"
 syn match nkplNetKATStar "⋆"
