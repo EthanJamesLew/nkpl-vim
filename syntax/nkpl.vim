@@ -7,7 +7,7 @@ endif
 syn clear
 
 syn match nkplBAExp "∨\|∧\|⊤\|⊥"
-syn match nkplNetKAT "∅\|ε\|δ\|=\|≠\|←\|∪\|⋅"
+syn match nkplNetKAT "∅\|ε\|δ\|=\|≠\|←\|∪\|⋅\|≡\|≢"
 syn match nkplNetKATStar "⋆"
 syn match nkplKey "@"
 syn match nkplNeg "¬"
