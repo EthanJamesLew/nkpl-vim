@@ -12,7 +12,7 @@ syn match nkplNetKATStar "⋆"
 syn match nkplKey "@"
 syn match nkplNeg "¬"
 syn match nkplLambda "λ"
-syn match nkplEba "\?"
+syn match nkplEba "?"
 syn match nkplInteger "\<\d\+\>"
 
 syn keyword nkplConstruct any do let log rep drop skip
@@ -33,6 +33,8 @@ hi def link nkplEba Special
 hi def link nkplInteger Constant 
 hi def link nkplComment Comment
 hi def link nkplString String
+hi def link nkplConstruct Statement
+hi def link nkplCommand Statement
 
 " Set file type detection
 au BufRead,BufNewFile *.nkpl set filetype=nkpl
