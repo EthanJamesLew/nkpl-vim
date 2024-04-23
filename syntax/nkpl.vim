@@ -23,14 +23,14 @@ syn match nkplComment "--.*$"
 syn region nkplString start=+"+ skip=+\\"+ end=+"+ keepend
 
 " Highlighting rules
-hi def nkplBAExp Operator
-hi def nkplNetKAT Operator
+hi def link nkplBAExp Operator
+hi def link nkplNetKAT Operator
 hi nkplNetKATStar ctermfg=red guifg=red
-hi def nkplKey Special
-hi def nkplNeg Operator
+hi def link nkplKey Special
+hi def link nkplNeg Operator
 hi def link nkplLambda Special
-hi def nkplEba Special
-hi nkplInteger ctermfg=yellow guifg=yellow
+hi def link nkplEba Special
+hi def link nkplInteger Constant 
 hi def link nkplComment Comment
 hi def link nkplString String
 
